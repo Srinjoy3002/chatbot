@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import requests
-
+import os
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 app = Flask(__name__)
 
 GEMINI_API_KEY = "AIzaSyD0wMd8MtWnH1D0ArstE4bzrY0BzFgcmeo"
@@ -49,4 +50,5 @@ def ask():
     except Exception as e:
         return jsonify({"reply": f"⚠️ Error: {str(e)}"}), 500
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=5000, debug=True)
