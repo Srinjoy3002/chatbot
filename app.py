@@ -4,7 +4,7 @@ import os
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 app = Flask(__name__)
 
-GEMINI_API_KEY = "AIzaSyD0wMd8MtWnH1D0ArstE4bzrY0BzFgcmeo"
+GEMINI_API_KEY = "AIzaSyB6REz1l8-Yl89hicMrqCPST_wyUvoRJQ4"
 # Try explicit version if available
 GEMINI_ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key={GEMINI_API_KEY}"
 
@@ -52,3 +52,4 @@ def ask():
 if __name__ == "__main__":
 
     app.run(host="0.0.0.0", port=5000, debug=True)
+
